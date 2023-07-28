@@ -10,6 +10,6 @@ In the code file named "efficientdet5_coco17_object_detection," you need to upda
 Additionally, there is another link to download pretrained weights used to train the YOLO Model. Click on the link below to download the file:
 https://drive.google.com/file/d/1NMh70ewU1Ph2eC17DcxynLI9DfQ9z6-d/view?usp=sharing
 
-Once downloaded, place the pretrained YOLO model weights file in the "yolo-info" folder. This folder is likely referenced in the code for loading the YOLO Model.
+Once downloaded, place the pretrained YOLO model weights file in the "yolo-info" folder. This folder is referenced in the code for loading the correct YOLO Model.
 
 Before running the code, make sure to read the instructions provided at the top of each code file to understand how to execute the code properly.
