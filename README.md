@@ -5,7 +5,7 @@ Once on the TensorFlow model zoo page, find the section for "EfficientDet D5 128
 
 After downloading the EfficientDet D5 model folder, make sure to note its name/location on your computer.
 
-In the code file named "efficientdet5_coco17_object_detection," you need to update the command line parameter "--model" with the correct folder name of the EfficientDet D5 model you just downloaded. This will ensure that the code uses the correct model for the object detection.
+In the code file named "efficientdet5_coco17_object_detection," you need to update the command line parameter "--model" with the correct folder name of the EfficientDet D5 model you just downloaded. This will ensure that the code uses the correct model for the object detection if you don't name it the same as the example shows
 
 Additionally, there is another link to download pretrained weights used to train the YOLO Model. Click on the link below to download the file:
 https://drive.google.com/file/d/1NMh70ewU1Ph2eC17DcxynLI9DfQ9z6-d/view?usp=sharing
