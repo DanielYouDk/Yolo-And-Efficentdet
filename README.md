@@ -1,4 +1,3 @@
-# Disclaimers
 
 Make sure to
 click the link below and navigate to the model EfficientDet D5 1280x1280 and download the folder to gain access to the Efficientdet5 model used in the code
