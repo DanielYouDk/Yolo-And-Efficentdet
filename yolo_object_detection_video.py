@@ -1,7 +1,5 @@
 # how to run code in cmd
 # python yolo_object_detection_video.py -i videos/your-video.mp4 -o outputs/video-output.avi -y yolo-info -c # -t #
-# example of cmd code :
-# python yolo_object_detection_video.py -i videos/runningdog.mp4 -o outputs/runningdog-output.avi -y yolo-info -c 0.4 -t 0.2
 # Note : the threshold and confidence values don't have to be defined as they have a default value that is pretty much already optimized
 # make sure you are in the same directory as your python file
 
