@@ -1,5 +1,5 @@
 Click on the link below to access the TensorFlow model zoo page:
-TensorFlow Model Zoo
+https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md
 
 Once on the TensorFlow model zoo page, find the section for "EfficientDet D5 1280x1280" model and download the corresponding folder.
 
