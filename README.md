@@ -1,30 +1,15 @@
+Click on the link below to access the TensorFlow model zoo page:
+TensorFlow Model Zoo
 
-Make sure to
-click the link below and navigate to the model EfficientDet D5 1280x1280 and download the folder to gain access to the Efficientdet5 model used in the code
-file efficientdet5_coco17_object_detection
+Once on the TensorFlow model zoo page, find the section for "EfficientDet D5 1280x1280" model and download the corresponding folder.
 
-https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md
+After downloading the EfficientDet D5 model folder, make sure to note its name/location on your computer.
 
-make sure to update the command prompt line --model to the correct folder name of the Efficientdet5 model you downloaded when running the code
+In the code file named "efficientdet5_coco17_object_detection," you need to update the command line parameter "--model" with the correct folder name of the EfficientDet D5 model you just downloaded. This will ensure that the code uses the correct model for the object detection.
 
+Additionally, there is another link to download pretrained weights used to train the YOLO Model. Click on the link below to download the file:
+Pretrained YOLO Model Weights
 
+Once downloaded, place the pretrained YOLO model weights file in the "yolo-info" folder. This folder is likely referenced in the code for loading the YOLO Model.
 
-
-
-
-heres the link to download the pretrained weights used to train the Yolo Model and make sure to leave the file in the yolo-info folder
-
-https://drive.google.com/file/d/1NMh70ewU1Ph2eC17DcxynLI9DfQ9z6-d/view?usp=sharing
-
-
-
-
-
-
-Instructions to run the code are defined at the top each code file
-
-
-
-
-
-
+Before running the code, make sure to read the instructions provided at the top of each code file to understand how to execute the code properly.
