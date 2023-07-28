@@ -1,5 +1,7 @@
-# how to use the code below
-# run, python efficientdet5_coco17_object_detection.py --image images/your-image.jpg --model efficientdet5_model in command prompt
+# how to run the code 
+# type, python efficientdet5_coco17_object_detection.py --image images/(your-image.jpg) --model (efficientdet5_model) in command prompt
+# note : the stuff around parentheses are placeholders and should be correctly replaced.
+# this command prompt assumes you have a seperate folder called images that stores all the images to test on the Efficientdet5 model.
 # make sure you are in the same directory as your python file
 
 # packages
