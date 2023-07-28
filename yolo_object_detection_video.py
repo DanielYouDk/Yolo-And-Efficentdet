@@ -1,5 +1,5 @@
 # how to run code 
-# python yolo_object_detection_video.py -i videos/(your-video.mp4) -o outputs/(video-output.avi) -y yolo-info -c # -t #
+# python yolo_object_detection_video.py -i videos/(your-video.mp4) -o outputs/(video-output.avi) -y yolo-info -c # -t # in command prompt
 # everything in parentheses are placeholders and should be replaced accordingly
 # this command prompt assumes you have two seperate folders, videos and outputs to store the video files and the video files returned as an 
 # output after ran in the code 
