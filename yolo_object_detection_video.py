@@ -1,7 +1,8 @@
 # how to run code 
 # python yolo_object_detection_video.py -i videos/(your-video.mp4) -o outputs/(video-output.avi) -y yolo-info -c # -t #
 # everything in parentheses are placeholders and should be replaced accordingly
-# this command prompt assumes you have two seperate folders, videos and outputs to store videos and the video output after ran in the code.
+# this command prompt assumes you have two seperate folders, videos and outputs to store the video files and the video files returned as an 
+# output after ran in the code 
 # Note : the threshold and confidence values don't have to be defined as they have a default value that was already tested and optimized
 # make sure you are in the same directory as your python file
 
