@@ -5,7 +5,9 @@ file efficientdet5_coco17_object_detection
 
 https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md
 
-make sure to update the command prompt line --model to the correct folder name of the Efficientdet5 model you downloaded 
+make sure to update the command prompt line --model to the correct folder name of the Efficientdet5 model you downloaded when running the code
+
+
 
 
 
