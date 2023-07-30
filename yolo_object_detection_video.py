@@ -17,11 +17,11 @@ import subprocess
 def parse_arguments():
     # Parse command line arguments
     ap = argparse.ArgumentParser()
-    ap.add_argument("-i", "--input", required=True, help="path to input video")
-    ap.add_argument("-o", "--output", required=True, help="path to output video")
-    ap.add_argument("-y", "--yolo", required=True, help="base path to YOLO directory")
-    ap.add_argument("-c", "--confidence", type=float, default=0.5, help="minimum probability to filter weak detections")
-    ap.add_argument("-t", "--threshold", type=float, default=0.3, help="threshold when applying non-maxima suppression")
+    ap.add_argument("-i", "--input", required=True)
+    ap.add_argument("-o", "--output", required=True)
+    ap.add_argument("-y", "--yolo", required=True)
+    ap.add_argument("-c", "--confidence", type=float, default=0.5)
+    ap.add_argument("-t", "--threshold", type=float, default=0.3)
     return vars(ap.parse_args())
 
 def load_labels(yolo_path):
@@ -73,7 +73,7 @@ def main():
     # Load YOLO labels and initialize random colors
     LABELS = load_labels(args["yolo"])
     COLORS = initialize_colors(len(LABELS))
-
+    
     # Load the YOLO model
     net, ln = load_yolo_model(args["yolo"])
 
