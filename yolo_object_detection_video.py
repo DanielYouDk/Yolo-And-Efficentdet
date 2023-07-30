@@ -164,8 +164,8 @@ def main():
 
     while True:
         # Read a frame from the video
-        (grabbed, frame) = vs.read()
-        if not grabbed:
+        (obtained, frame) = vs.read()
+        if not obtained:
             break
 
         # If the frame dimensions are not yet set, set them
