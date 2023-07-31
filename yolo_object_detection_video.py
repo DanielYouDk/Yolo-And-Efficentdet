@@ -1,7 +1,5 @@
 # how to run code in cmd
-# python yolo_object_detection_video.py -i videos/your-video.mp4 -o outputs/video-output.avi -y yolo-info -c # -t #
-# example of cmd code :
-# python yolo_object_detection_video.py -i videos/runningdog.mp4 -o outputs/runningdog-output.avi -y yolo-info -c 0.4 -t 0.2
+# python yolo_object_detection_video.py -i videos/your-video.mp4 -o outputs/video-output.avi -y yolov4-info -c # -t #
 # Note : the threshold and confidence values don't have to be defined as they have a default value that is pretty much already optimized
 # make sure you are in the same directory as your python file
 
@@ -26,11 +24,11 @@ def parse_arguments():
         dict: Dictionary containing the parsed command line arguments.
     """
     ap = argparse.ArgumentParser()
-    ap.add_argument("-i", "--input", required=True)
-    ap.add_argument("-o", "--output", required=True)
-    ap.add_argument("-y", "--yolo", required=True)
-    ap.add_argument("-c", "--confidence", type=float, default=0.5)
-    ap.add_argument("-t", "--threshold", type=float, default=0.3)
+    ap.add_argument("-i", "--input", required=True, help="path to input video")
+    ap.add_argument("-o", "--output", required=True, help="path to output video")
+    ap.add_argument("-y", "--yolo", required=True, help="base path to YOLO directory")
+    ap.add_argument("-c", "--confidence", type=float, default=0.5, help="minimum probability to filter weak detections")
+    ap.add_argument("-t", "--threshold", type=float, default=0.3, help="threshold when applying non-maxima suppression")
     return vars(ap.parse_args())
 
 def load_labels(yolo_path):
@@ -73,8 +71,8 @@ def load_yolo_model(yolo_path):
     Returns:
         tuple: Tuple containing the YOLO model and its layer names.
     """
-    weights_path = os.path.join(yolo_path, "yolov3.weights")
-    config_path = os.path.join(yolo_path, "yolov3.cfg")
+    weights_path = os.path.join(yolo_path, "yolov4.weights")
+    config_path = os.path.join(yolo_path, "yolov4.cfg")
     net = cv2.dnn.readNetFromDarknet(config_path, weights_path)
     ln = net.getLayerNames()
     ln = [ln[i - 1] for i in net.getUnconnectedOutLayers()]
@@ -194,8 +192,7 @@ def main():
         print("Frame processing time: {:.4f} seconds".format(end_time - start_time))
 
         if len(indices) > 0:
-            object_info = [(boxes[i], COLORS[classIDs[i]], LABELS[classIDs[i]], confidences[i])
-                           for i in indices.flatten()]
+            object_info = [(boxes[i], COLORS[classIDs[i]], LABELS[classIDs[i]], confidences[i]) for i in indices.flatten()]
 
             for box, color, label, confidence in object_info:
                 x, y, w, h = box
@@ -203,14 +200,14 @@ def main():
                 cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
                 text = "{}: {:.4f}".format(label, confidence)
 
-                # Increase the font size of the text
-                font_scale = 1.3
+                # set the font size of the text
+                font_scale = 0.9
 
                 # Set the text color
                 text_color = (0, 0, 0)
 
-                cv2.putText(frame, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX, float(font_scale), text_color, 4)
-                
+                cv2.putText(frame, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX, float(font_scale), color, 2)
+
         if writer is None:
             # Create the video writer
             writer = cv2.VideoWriter(args["output"], VIDEO_FOURCC, VIDEO_FPS, (frame_width, frame_height), True)
