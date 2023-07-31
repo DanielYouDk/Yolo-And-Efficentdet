@@ -18,7 +18,7 @@ Click on the following link to download the pretrained YOLOV4 model weights file
 https://drive.google.com/file/d/1Hwygr_j2DAMHpDTfhi0lPlQ9OD2Auyrg/view?usp=sharing
 
 Placing YOLOV4 Model Weights:
-After downloading the YOLOV4 model weights file, create a folder named "yolo-info4" and place the downloaded weights file inside it. This folder will be used in the code for loading the YOLO Model.
+After downloading the YOLOV4 model weights file, place the downloaded weights file inside the folder "yolov4-info". This folder will be used in the code for loading the YOLO Model.
 
 Reading Code File Instructions:
 Before running the code, make sure to read the instructions provided at the top of each code file. This will help you understand how to properly execute the code and utilize the downloaded models and weights.
