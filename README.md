@@ -13,7 +13,7 @@ Updating Command Line Parameters:
 In the code file named "efficientdet5_coco17_object_detection," update the command line parameter "--model" with the name of the separate folder you created for the EfficientDet D5 model. This ensures that the code uses the correct model for object detection even if you named the folder differently than the example shows. The same applies to the code file "efficientdet7_coco17_object_detection."
 
 Downloading Pretrained YOLOV4 Model Weights:
-Click on the following link to download the pretrained YOLOV4 model weights file: YOLOV4 Model Weights
+Click on the following link to download the pretrained YOLOV4 model weights file:
 
 https://drive.google.com/file/d/1Hwygr_j2DAMHpDTfhi0lPlQ9OD2Auyrg/view?usp=sharing
 
