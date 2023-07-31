@@ -1,5 +1,5 @@
 # how to use the code below
-# run, python efficientdet7_coco17_object_detection.py --image images/your-image.jpg --model efficientdet7_model in command prompt
+# run, python efficientdet7_coco17_object_detection.py --image images/(your-image.jpg) --model (efficientdet7_model) in command prompt
 # make sure you are in the same directory as your python file
 
 # packages
