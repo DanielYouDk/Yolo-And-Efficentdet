@@ -45,7 +45,7 @@ model = tf.saved_model.load(model_path)
 image = cv2.imread(args["image"])
 (H, W) = image.shape[:2]
 input_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-input_image = tf.image.resize(input_image, (1536, 1536))  # Update the image size for EfficientDet D7
+input_image = tf.image.resize(input_image, (1536, 1536))
 input_image = tf.expand_dims(input_image, 0)
 input_image = tf.cast(input_image, dtype=tf.uint8)
 
